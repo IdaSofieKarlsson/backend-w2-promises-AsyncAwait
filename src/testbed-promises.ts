@@ -1,7 +1,7 @@
 //these are my private notes
 
 //the promise takes two arguments: resolve and reject
-/*
+
 const myPromise = new Promise((resolve, reject) => {
     //logic
     let success = true;
@@ -23,7 +23,7 @@ myPromise
     console.log('error: ' + error);
     //logic
 });
-*/
+
 
 //kodbiten om TypeScript. använd utskrift "console.log(data);" som kommit om APIn funkat 
 type AdviceResponse = {
