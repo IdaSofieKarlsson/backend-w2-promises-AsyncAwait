@@ -29,3 +29,18 @@ const fetchAdvideByIDs = (id: number) => {
 let id: number = Math.floor(Math.random() * 224) + 1;
 fetchAdvideByIDs(id);
 id = Math.floor(Math.random() * 224) + 1;
+fetchAdvideByIDs(id);
+id = Math.floor(Math.random() * 224) + 1;
+fetchAdvideByIDs(id);
+id = Math.floor(Math.random() * 224) + 1;
+fetchAdvideByIDs(id);
+id = Math.floor(Math.random() * 224) + 1;
+fetchAdvideByIDs(id);
+id = Math.floor(Math.random() * 224) + 1;
+fetchAdvideByIDs(id);
+id = Math.floor(Math.random() * 224) + 1;
+fetchAdvideByIDs(id);
+id = Math.floor(Math.random() * 224) + 1;
+fetchAdvideByIDs(id);
+id = Math.floor(Math.random() * 224) + 1;
+fetchAdvideByIDs(id);

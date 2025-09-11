@@ -2,13 +2,22 @@
 
 //instead of > 0.5 and thus random 50/50, I changed the value. Otherwise this gets too depressive :) 
 //I also changed the win/lose. If the day is good, you are already fine. If the day is bad, then you need som advice to help
+
+
 const myOutlookDay = new Promise((resolve, reject) => {
 
     let isThisAGoodDay: number = Math.random();  //random is weird, I get more reject than I should?
-    if (isThisAGoodDay > 0.7) {
+    if (isThisAGoodDay > 0.4) {
         resolve('This is a good day. Enjoy!');
     } else {
         reject("This is a bad day. Here's some advice to help you.");
+
+        type AdviceResponse = {
+         slip: {
+        id: number,
+        advice: string,
+        };
+        };
 
         const fetchAdvideByIDs = async (id: number) => {
             try {
@@ -16,7 +25,7 @@ const myOutlookDay = new Promise((resolve, reject) => {
                 if (!response.ok) {
                     throw new Error('Network response was not ok.');
                 }
-                const data = await response.json();
+                const data: AdviceResponse = await response.json();
                 const advice: string = data.slip.advice;
                 console.log(`Advice ${id}: `, advice);
             }  catch (error) {

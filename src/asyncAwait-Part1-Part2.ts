@@ -3,11 +3,12 @@
 const myOutlookDay = new Promise((resolve, reject) => {
 
     let isThisAGoodDay: number = Math.random();
-    //instead of > 0.5 and thus random 50/50, I changed the value. Otherwise this gets too depressive :) 
-    if (isThisAGoodDay > 0.7) {
+    
+    if (isThisAGoodDay > 0.5) {
         resolve('This is a good day. Enjoy!');
     } else {
         reject('This is a bad day. Go back to sleep.');
+        //
     }
 });
 
@@ -36,7 +37,7 @@ const fetchAdvideByIDs = async (id: number) => {
         if (!response.ok) {
             throw new Error('Network response was not ok.');
         }
-        const data = await response.json();
+        const data: AdviceResponse = await response.json();
         const advice: string = data.slip.advice;
         console.log(`Advice ${id}: `, advice);
     }  catch (error) {
